@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+Header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.261);
+    position: relative;
+    position: fixed;
+    z-index: 9999;
+}
+
+.logo {
+    width: 450px;
+    height: auto;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Menu_Box {
+    height: auto;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    padding: 20px;
+    right: 0;
+}
+
+.Menu_Box>button {
+    padding: 5px 10px;
+    /* background-color: orange; */
+    color: white;
+    font-size: 30px;
+    position: relative;
+}
+
+.Menu_Box>button::before {
+    content: '';
+    width: 100%;
+    height: 50%;
+    /* background-color: red; */
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+
+.Menu {
+    width: 0;
+    right: 0;
+    top: 100%;
+    padding: 30px;
+    position: absolute;
+    height: auto;
+    display: none;
+    background-color: rgba(251, 250, 250, 0.661);
+    transition: 1s;
+    overflow: hidden;
+    z-index: 9999;
+    opacity: 0;
+}
+
+.Menu>div {
+    width: 100%;
+}
+
+.Menu:hover {
+    width: 400px;
+    opacity: 1;
+    overflow: auto;
+    display: block;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
+    height: 90vh;
+}
+
+.Menu_Box>button:hover~.Menu {
+    width: 400px;
+    opacity: 1;
+    display: block;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
+}
+
+.Menu>div:nth-child(3) li {
+    border-bottom: 2px solid black;
+}
+
+.Menu ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.Menu li {
+    overflow: hidden;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    color: black;
+
+}
+
+.Menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.Menu input {
+    width: 60%;
+    padding: 20px;
+    outline: none;
+    height: 40px;
+    border: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+}
+
+.Menu button {
+    padding: 10px 20px;
+    color: red;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+}
+
+#button {
+    background-color: red;
+    color: white;
+    border-radius: 15px;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(249, 245, 245);
+    overflow: hidden;
+}
+
+.contener {
+    padding: 20px 0;
+}
+
+
+.contener h1 {
+    text-transform: capitalize;
+    color: rgba(255, 0, 0, 0.651);
+    text-align: center;
+}
+
+.Post_Box {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 140px;
+
+}
+
+.Post {
+    width: 300px;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.5s;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.31);
+}
+
+.Post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.682);
+}
+
+.Post>div {
+    margin: 8px;
+}
+
+.Post_Img {
+    width: 280px;
+    height: 200px;
+}
+
+.Post_Img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.Post_Info {
+    width: 100%;
+    height: auto;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-startce;
+}
+
+.Post_Info>div {
+    width: 100%;
+    margin: 7px;
+}
+
+.Post_Info p {
+    font-weight: 500;
+    color: black;
+}
+
+.Post_Info a {
+    text-decoration: none;
+    color: black;
+
+}
+
+footer {
+    background-color: rgba(69, 69, 69, 0.498);
+    padding: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer div {
+    color: white;
+    margin: 10px;
+    width: 600px;
+}
+
+.Address_Box>div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Address_Box span {
+    margin: 5px;
+}
+
+.Address_Box p {
+    margin: 5px;
+}
+
+.Socyal_Liks_Box ul {
+    width: 100%;
+    height: 80px;
+    border-radius: 50px;
+    background-color: rgb(244, 135, 96);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.Socyal_Links_Box li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Socyal_Liks_Box a {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+@media only screen and (min-width:1200px) {
+    .contener {
+        padding: 100px 0;
+    }
+    .Post_Box{
+        padding: 40px 200px;
+    }
+}
+
+@media only screen and (min-width:1024px) and (max-width:1200px) {
+    .contener {
+        padding: 110px 0;
+    }
+
+    .Post_Box {
+        padding: 40px 30px;
+    }
+    footer>div{
+        width: 400px;
+    }
+    footer>div>div{
+        width: 100%;
+    }
+    .Address_Box{
+        width: 100%;
+    }
+
+    .Address_Box>div{
+        width: 100%;
+    }
+    .Socyal_Liks_Box ul {
+        width: 100%;
+        height: 60px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .Post_Box {
+        padding: 0;
+    }
+
+    .contener {
+        padding: 80px 0;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (min-width:552px) and (max-width:768px) {
+
+    .contener {
+        padding: 100px 0;
+    }
+
+    .contener>div {
+        margin: 0
+    }
+
+    .Post_Box {
+        padding: 40px 0;
+    }
+
+    .Post {
+        width: 245px;
+        height: auto;
+        display: flex;
+
+    }
+
+    .Post_Img {
+        width: 100%;
+        height: 150px;
+    }
+
+    .Post_Info>p {
+        font-size: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+
+}
+
+
+@media only screen and (min-width:320px) and (max-width:552px) {
+    Header {
+        width: 100%;
+    }
+
+    .Menu:hover {
+        width: 350px;
+        opacity: 1;
+    }
+
+    .Menu_Box>button:hover~.Menu {
+        width: 350px;
+        height: 90vh;
+    }
+
+    .Menu li {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 70%;
+    }
+
+    .contener {
+        padding: 100px;
+    }
+
+    .contener>div {
+        margin: 0;
+    }
+    .Post_Box{
+        padding: 40px 0;
+    }
+
+    .contener h1 {
+        font-size: 20px;
+    }
+
+    footer div {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    .Socyal_Liks_Box a {
+        margin: 7px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .Socyal_Liks_Box ul {
+        width: 100%;
+        height: 60px;
+    }
+
+    .Address_Box p {
+        margin: 1px;
+    }
+
+}
